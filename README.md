@@ -4,6 +4,10 @@ Welcome to the Person Finder frontend app for finding persons.
 
 This template should help get you started developing in this codebase with Vue 3 in Vite.
 
+## My thoughts on future site improvements
+Recycler View:
+* Loading 1000 'persons' is a heavier than necessary lift for the browser's DOM. It would be nice to incorporate a recycler view into the listing of persons to make it easier for the browser and potentially increase the app's performance.
+
 ## Recommended IDE Setup
 
 [VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).

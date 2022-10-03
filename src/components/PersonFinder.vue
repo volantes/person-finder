@@ -17,7 +17,7 @@ onMounted(async () => {
   isLoading.value = false;
 })
 
-let inputTimeout: number;
+let inputTimeout: ReturnType<typeof setTimeout>;
 const debounceInputEvent = () => {
   if (inputTimeout) 
     clearTimeout(inputTimeout); 
@@ -35,17 +35,6 @@ const filterPersonDateByName = (personData: IPerson[], name: string): IPerson[] 
   return personData.filter( (person:IPerson) => {
     return person.name.toLowerCase().includes(name);
   });
-
-  // considering code if performance is slow. 
-  let personDataFiltered: IPerson[] = [];
-  let person: IPerson;
-  for(let i = 0; i < personData.length; i++) {
-    person = personData[i];
-    if(person.name.toLowerCase().includes(name)) {
-      personDataFiltered.push(person);
-    }
-  }
-  return personDataFiltered
 }
 
 onUnmounted( () => {
