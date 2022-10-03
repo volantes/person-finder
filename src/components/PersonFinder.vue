@@ -10,7 +10,6 @@ const searchInput = ref("");
 const originanlPersonData = shallowRef([] as IPerson[]);
 const personData = shallowRef([] as IPerson[]);
 
-let inputTimeout: number;
 onMounted(async () => {
   isLoading.value = true;
   originanlPersonData.value = await getPersonData();
@@ -18,6 +17,7 @@ onMounted(async () => {
   isLoading.value = false;
 })
 
+let inputTimeout: number;
 const debounceInputEvent = () => {
   if (inputTimeout) 
     clearTimeout(inputTimeout); 

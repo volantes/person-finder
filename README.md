@@ -1,6 +1,8 @@
 # person-finder
 
-This template should help get you started developing with Vue 3 in Vite.
+Welcome to the Person Finder frontend app for finding persons. 
+
+This template should help get you started developing in this codebase with Vue 3 in Vite.
 
 ## Recommended IDE Setup
 
